@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/page_bg"
+                android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/init_logo"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:lineSpacingExtra="10dp"
+        android:text="离线创建多链钱包\n数据加密安全存储\n打造去中心化工具"
+        android:textColor="@color/black"
+        android:textSize="@dimen/s13"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="76dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fiw_create_wallet"
+            style="@style/button_style"
+            android:text="@string/create_wallet"/>
+
+        <com.vip.wallet.widget.UnderlineTextView
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/fiw_import_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/import_wallet"
+            android:textColor="@color/selector_init_import_wallet_bt"
+            android:textSize="@dimen/s14"/>
+
+    </LinearLayout>
+</RelativeLayout>

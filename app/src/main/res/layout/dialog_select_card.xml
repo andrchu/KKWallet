@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_select_card_top_bg">
+
+        <ImageView
+            android:id="@+id/dsc_exit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/xx"/>
+
+        <TextView
+            android:id="@+id/dsc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/select_card"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+    </RelativeLayout>
+    <View
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="1px"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/page_bg"
+        android:id="@+id/dsc_list"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"/>
+
+</LinearLayout>

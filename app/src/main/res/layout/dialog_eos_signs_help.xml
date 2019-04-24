@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/shape_dialog_def_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="14dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="@string/help"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:lineSpacingExtra="6dp"
+            android:text="      若账号的转账需要多个账号授权签名，则可使用该功能。否则单方面提交，提示权限不足，无法顺利转账。"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="     操作步骤"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="6dp"
+            android:lineSpacingExtra="4dp"
+            android:text="       1.发起者生成交易信息二维码\n       2.发给授权人使用KKWallet扫码授权\n       3.待授权的权重总和大于或等于权限阈值，则可以提交交易信息"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/deti_exit"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_margin="12dp"
+        android:scaleType="center"
+        android:src="@drawable/exit_blue"/>
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#4d62b2ff"/>
+        </shape>
+    </item>
+    <item
+        android:bottom="16dp"
+        android:gravity="center"
+        android:left="16dp"
+        android:right="16dp"
+        android:top="16dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/title_bar_bg"/>
+        </shape>
+    </item>
+</layer-list>

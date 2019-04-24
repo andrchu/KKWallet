@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:title="默认货币"/>
+
+    <RadioGroup
+        android:id="@+id/fdc_rg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <RadioButton
+            android:id="@+id/fdc_cny"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/selector_def_currency"
+            android:button="@null"
+            android:gravity="center"
+            android:text="CNY"
+            android:textColor="@color/checked_black_white"
+            android:textSize="@dimen/s14"
+            android:textStyle="bold"/>
+
+        <RadioButton
+            android:id="@+id/fdc_usd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/selector_def_currency"
+            android:button="@null"
+            android:gravity="center"
+            android:text="USD"
+            android:textColor="@color/checked_black_white"
+            android:textSize="@dimen/s14"
+            android:textStyle="bold"/>
+
+    </RadioGroup>
+
+</LinearLayout>

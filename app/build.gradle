@@ -1,0 +1,208 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+apply plugin: 'org.greenrobot.greendao'
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.3"
+    defaultConfig {
+        applicationId "com.vip.wallet"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 24
+        versionName "2.6.2"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            //设置支持的SO库架构
+            abiFilters 'armeabi', 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "8043bf054ed5a424a0fdf7cb", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    buildTypes {
+        release {
+            buildConfigField "boolean", "LEO_DEBUG", "false"
+//            zipAlignEnabled true
+//            shrinkResources true
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+            buildConfigField "boolean", "LEO_DEBUG", "true"
+            versionNameSuffix "-debug"
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+        }
+
+    }
+
+    signingConfigs {
+        /* debug {
+             storeFile file('vipWallet.jks')
+             storePassword "jinguodong"
+             keyAlias "wallet"
+             keyPassword "jinguodong"
+         }*/
+        release {
+            storeFile file("vipWallet.keystore")
+            storePassword "jinguodong"
+            keyAlias "wallet"
+            keyPassword "jinguodong"
+            v2SigningEnabled false
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "4g"
+    }
+
+    packagingOptions {
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/notice'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/rxjava.properties'
+
+    }
+
+    /* task ndkBuild(type: Exec) {
+         def rootDir = project.rootDir
+         def localProperties = new File(rootDir, "local.properties")
+         Properties properties = new Properties()
+         localProperties.withInputStream { instr ->
+             properties.load(instr)
+         }
+         def ndkDir = properties.getProperty('ndk.dir')
+
+         if (Os.isFamily(Os.FAMILY_WINDOWS)) {
+             commandLine ndkDir + '\\ndk-build.cmd',
+                     'NDK_LIBS_OUT=main/jniLibs',
+                     'NDK_PROJECT_PATH=' + rootDir + '\\app\\src',
+                     'APP_BUILD_SCRIPT=jni/Android.mk',
+                     '-C',
+                     file('src').absolutePath
+         } else {
+             commandLine ndkDir + '/ndk-build',
+                     'NDK_LIBS_OUT=main/jniLibs',
+                     'NDK_PROJECT_PATH=' + rootDir + '/app/src',
+                     'APP_BUILD_SCRIPT=jni/Android.mk',
+                     '-C',
+                     file('src').absolutePath
+         }
+     }
+
+     tasks.withType(JavaCompile) {
+         compileTask -> compileTask.dependsOn ndkBuild
+     }*/
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.github.bumptech.glide:glide:4.3.1'
+    //rx
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.3.0'
+    //retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30'
+    compile 'com.android.support:support-v4:26.+'
+    compile 'com.android.support:appcompat-v7:26.+'
+    compile 'com.android.support:recyclerview-v7:26.+'
+    compile 'com.android.support:cardview-v7:26.+'
+    //db
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
+    //utils
+    compile 'com.blankj:utilcode:1.16.0'
+//    compile 'com.blankj:utilcode:1.19.3'
+    //趋势图
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+    //Switch
+    compile 'com.kyleduo.switchbutton:library:2.0.0'
+    //二维码
+    compile 'cn.yipianfengye.android:zxing-library:2.2'
+    //权限申请
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.7.0@aar'
+    compile 'org.slf4j:slf4j-jdk14:1.7.6'
+    compile 'com.google.guava:guava:16.0.1'
+    //    compile 'org.web3j:core:3.1.1-android'
+    compile 'org.web3j:core-android:2.2.1'
+    //    compile 'org.web3j:core:3.2.0'
+    //    compile 'org.web3j:core:3.3.1-android'
+    compile 'org.bitcoinj:bitcoinj-core:0.14.6'
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'org.greenrobot:eventbus:3.1.1'
+    //    compile 'org.ethereum:geth:1.5.2'
+    //友盟统计
+    compile 'com.umeng.sdk:common:latest.integration'
+    compile 'com.umeng.sdk:analytics:latest.integration'
+    //    //蒲公英
+    //    compile 'com.pgyersdk:sdk:2.8.1'\
+    //bugly
+    compile 'com.tencent.bugly:crashreport_upgrade:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如1.2.0
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    //其中latest.release指代最新版本号，也可以指定明确的版本号，例如2.2.0
+    //jpush
+    compile 'cn.jiguang.sdk:jpush:3.1.1'
+    compile 'cn.jiguang.sdk:jcore:1.1.9'
+    //沉浸栏
+    compile 'com.gyf.barlibrary:barlibrary:2.3.0'
+    //流式布局
+    compile 'com.hyman:flowlayout-lib:1.1.2'
+    //WebView缓存
+    compile 'ren.yale.android:cachewebviewlib:1.4.0'
+    //fragment管理
+    compile 'me.yokeyword:fragmentation-swipeback:1.3.4'
+    compile 'me.yokeyword:fragmentation:1.3.4'
+    //手势密码(九宫格)
+    compile 'com.andrognito.patternlockview:patternlockview:1.0.0'
+    //animation
+    compile 'com.daimajia.androidanimations:library:2.3@aar'
+    //对话框
+    //    compile 'cn.pedant.sweetalert:library:1.3'
+    compile 'com.ogaclejapan.smarttablayout:library:1.6.1@aar'
+    //仿ios选择控件
+    compile 'com.contrarywind:wheelview:4.0.6'
+    compile project(':library')
+    compile project(':bitcoin')
+    compile project(':gallery')
+    //gif
+    compile 'pl.droidsonroids.gif:android-gif-drawable:1.2.14'
+    compile project(':eoslibrary')
+    compile 'com.thoughtbot:expandablerecyclerview:1.3'
+    compile 'com.github.TrustWallet:TrustCoreAndroid:0.01.6'
+    //轮播图
+    compile 'cn.bingoogolapple:bga-banner:2.2.4@aar'
+    compile 'me.jessyan:autosize:0.9.5'
+}
+greendao {
+    schemaVersion 7
+    daoPackage 'com.vip.wallet.dao'
+    targetGenDir 'src/main/java'
+}

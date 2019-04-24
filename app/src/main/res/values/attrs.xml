@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MainViewPager">
+        <attr name="isScroll" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="TitleBarView">
+        <attr name="title" format="string"/>
+        <attr name="title_text_color" format="color"/>
+        <attr name="button_text" format="string"/>
+        <attr name="button_text_color" format="color"/>
+        <attr name="button_text_colors" format="reference"/>
+        <attr name="button_image" format="reference"/>
+        <attr name="back_icon_image" format="reference"/>
+        <attr name="enable_button" format="boolean"/>
+        <attr name="enable_line" format="boolean"/>
+        <attr name="enable_back" format="boolean"/>
+        <attr name="vice_title" format="string"/>
+        <attr name="back_ground_color" format="color"/>
+        <attr name="back_color" format="color"/>
+        <attr name="button_margin_right" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="DrawableTextView">
+        <attr name="leftDrawable" format="reference|color"/>
+        <attr name="rightDrawable" format="reference|color"/>
+        <attr name="topDrawable" format="reference|color"/>
+        <attr name="bottomDrawable" format="reference|color"/>
+
+        <attr name="leftDrawableWidth" format="reference|dimension"/>
+        <attr name="rightDrawableWidth" format="reference|dimension"/>
+        <attr name="topDrawableWidth" format="reference|dimension"/>
+        <attr name="bottomDrawableWidth" format="reference|dimension"/>
+
+        <attr name="leftDrawableHeight" format="reference|dimension"/>
+        <attr name="rightDrawableHeight" format="reference|dimension"/>
+        <attr name="topDrawableHeight" format="reference|dimension"/>
+        <attr name="bottomDrawableHeight" format="reference|dimension"/>
+    </declare-styleable>
+</resources>

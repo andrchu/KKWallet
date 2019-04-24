@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/fp_layout"
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <com.vip.wallet.widget.TitleBarView
+            android:id="@+id/fp_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:title=" "/>
+
+        <com.ogaclejapan.smarttablayout.SmartTabLayout
+            android:overScrollMode="never"
+            android:id="@+id/fp_smart_tab_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_marginBottom="3dp"
+            app:stl_clickable="true"
+            app:stl_defaultTabTextAllCaps="false"
+            app:stl_defaultTabTextColor="@color/selector_property_tab_select"
+            app:stl_defaultTabTextSize="@dimen/s13"
+            app:stl_distributeEvenly="false"
+            app:stl_dividerThickness="0dp"
+            app:stl_drawDecorationAfterTab="false"
+            app:stl_indicatorColor="@color/colorPrimary"
+            app:stl_indicatorCornerRadius="2dp"
+            app:stl_indicatorGravity="bottom"
+            app:stl_indicatorThickness="2dp"
+            app:stl_indicatorWidth="16dp"
+            app:stl_overlineThickness="0dp"
+            app:stl_underlineThickness="0dp"/>
+    </RelativeLayout>
+            <!--app:stl_indicatorAlwaysInCenter="true"-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/fp_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

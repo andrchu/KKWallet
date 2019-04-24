@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:showDividers="middle"
+              android:divider="@drawable/shape_horizontal_line"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fac_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:button_text="@string/save"
+        app:enable_button="true"
+        app:title="添加联系人"/>
+
+    <TextView
+        android:id="@+id/fac_su_name"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="18dp"
+        android:background="@drawable/shape_selected_dot"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s13"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/fac_name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_white_cir_rec"
+        android:hint="@string/name"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:singleLine="true"
+        android:textColor="@color/black"
+        android:textSize="@dimen/s14"/>
+
+    <LinearLayout
+        android:id="@+id/fac_select_chain"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/item_selector"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择地址类型"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/fac_chain_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:drawableRight="@drawable/you"
+            android:drawablePadding="12dp"
+            android:text="ETH"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/s13"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <EditText
+            android:id="@+id/fac_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:hint="@string/address"
+            android:paddingLeft="12dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <ImageView
+            android:id="@+id/fac_scanner_qr"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/item_selector"
+            android:scaleType="center"
+            android:src="@drawable/scanner_qr_blue"/>
+
+    </LinearLayout>
+
+</LinearLayout>

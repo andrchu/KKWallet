@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/receive_token_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:back_ground_color="@color/receive_token_bg"
+        app:back_icon_image="@drawable/back_white"
+        app:enable_line="false"
+        app:title="@string/collect_pay_token"
+        app:title_text_color="@color/white"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="14dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/receive_send_token_top_bg">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/receive_address"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="@string/receive_address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/s13"/>
+
+                <ImageView
+                    android:scaleType="center"
+                    android:src="@drawable/share_address"
+                    android:id="@+id/frs_share_address"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/frs_copy_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="16dp"
+                    android:text="点击复制地址"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/s14"/>
+
+                <ImageView
+                    android:id="@+id/frs_qr_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginRight="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="1"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:background="@color/line"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/frs_select_chain"
+                style="@style/item_style"
+                android:background="@drawable/shape_receive_send_backbone_item_bg"
+                android:drawableLeft="@drawable/eth_min_icon"
+                android:text="ETH主链"/>
+        </LinearLayout>
+
+        <TextView
+            android:drawableLeft="@drawable/send_token"
+            android:id="@+id/frs_send_token"
+            style="@style/item_style_cir"
+            android:background="@drawable/item_send_token_selector"
+            android:text="@string/send_token"
+            android:drawableRight="@drawable/more_white"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s14"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"/>
+    </LinearLayout>
+</LinearLayout>

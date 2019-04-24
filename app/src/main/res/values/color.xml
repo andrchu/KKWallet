@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#578EC4</color>
+    <color name="colorPrimaryDark">#578EC4</color>
+    <color name="colorAccent">#578EC4</color>
+    <color name="white">#FFF</color>
+    <color name="gray_text">#a3a3a3</color>
+    <color name="gray_s">#bbb</color>
+    <color name="gray">#999</color>
+    <color name="gray_l">#8f8f8f</color>
+    <color name="title_bar_bg">#578EC4</color>
+    <color name="title_bar_bg_pr">#9962b2ff</color>
+    <color name="create_wallet_hint_bg">#578EC4</color>
+    <color name="transparent">#0000</color>
+    <color name="page_bg">#f3f4f5</color>
+    <color name="black">#000</color>
+    <color name="line">#e5e5e5</color>
+    <color name="orange">#fa6521</color>
+    <color name="yellow">#ffe400</color>
+    <color name="orange_pr">#99fa6521</color>
+    <color name="sw_line">#e4e4e4</color>
+    <color name="iw">#2f98fd</color>
+    <color name="iw_pr">#992f98fd</color>
+    <color name="violet">#766dff</color>
+
+
+    <color name="pwd_q">#91d056</color>
+    <color name="pwd_z">#ffb644</color>
+    <color name="pwd_r">#ff5959</color>
+
+    <color name="delete">#ff5959</color>
+    <color name="delete_pr">#aaff5959</color>
+
+    <color name="message_count_bg">#fe7e77</color>
+    <color name="red">#f00</color>
+    <color name="red_p">#9f00</color>
+    <color name="home_bg">#6F85FF</color>
+    <color name="select_wallet_bg">#1a62b2ff</color>
+    <color name="back">#578EC4</color>
+    <color name="pwd_error">#ff3030</color>
+    <color name="tab_bg">#f7f7f7</color>
+    <color name="my_center_top_bg">#696f77</color>
+    <color name="receive_token_bg">#578EC4</color>
+    <color name="item_send_token_bg">#55ffffff</color>
+    <color name="button_disable_bg">#cdcdcd</color>
+
+</resources>

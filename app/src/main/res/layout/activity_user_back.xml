@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/uba_send"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:button_text="@string/send"
+        app:enable_button="true"
+        app:enable_line="true"
+        app:title="@string/user_back"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:id="@+id/uba_content"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
+            android:gravity="left|top"
+            android:hint="@string/user_back_hint_content"
+            android:maxLength="150"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray_text"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/uba_limit_hint"
+            android:textColor="@color/gray_text"
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/uba_contact"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="@string/user_back_hint_contact"
+        android:maxLines="1"
+        android:paddingLeft="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_text"
+        android:textSize="@dimen/s14"/>
+</LinearLayout>

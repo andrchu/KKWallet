@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:title="@string/manage_card"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/shape_white_cir_rec"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/fmc_chain_type_icon"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@drawable/eth_qr_logo"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/fmc_chain_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_manage_card_chain_bg"
+                android:paddingBottom="2dp"
+                android:paddingLeft="4dp"
+                android:paddingRight="4dp"
+                android:paddingTop="2dp"
+                android:text="ETH"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/s14"/>
+
+            <TextView
+                android:id="@+id/fmc_card_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="wallet1"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/s14"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:divider="@drawable/shape_horizontal_line"
+        android:dividerPadding="12dp"
+        android:orientation="vertical"
+        android:showDividers="middle">
+
+        <TextView
+            android:id="@+id/fmc_update_card_name"
+            style="@style/item_style"
+            android:text="@string/update_card_name"/>
+
+        <TextView
+            android:id="@+id/fmc_export_private_key"
+            style="@style/item_style"
+            android:text="@string/export_private_key"/>
+
+        <TextView
+            android:id="@+id/fmc_export_seed_key"
+            style="@style/item_style"
+            android:text="@string/export_seed_key"/>
+
+        <TextView
+            android:id="@+id/fmc_permission_manage"
+            style="@style/item_style"
+            android:text="@string/permission_manage"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/fmc_delete_card"
+        style="@style/button2_style"
+        android:background="@drawable/selector_delete"
+        android:text="@string/delete"/>
+
+</LinearLayout>

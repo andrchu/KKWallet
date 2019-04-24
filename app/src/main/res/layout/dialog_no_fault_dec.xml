@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/shape_dialog_def_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/dnfd_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:text="@string/no_fault_dec"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/dnfd_desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/no_fault_dec_desc"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/nfdd_exit"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_confirm"
+            android:gravity="center"
+            android:text="@string/know"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

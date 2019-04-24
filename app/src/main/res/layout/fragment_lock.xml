@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fl_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:title="@string/set_pattern_pwd"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fl_recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="50dp"
+        android:overScrollMode="never"
+        android:scrollbars="none"/>
+
+    <TextView
+        android:id="@+id/fl_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="请确认手势密码"
+        android:textColor="@color/black"
+        android:textSize="@dimen/s14"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/fl_error_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="密码不一致，请重新输入"
+        android:textColor="@color/pwd_error"
+        android:textSize="@dimen/s14"
+        android:visibility="invisible"/>
+
+    <com.andrognito.patternlockview.PatternLockView
+        android:id="@+id/pattern_lock_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        app:correctStateColor="@color/title_bar_bg"
+        app:dotNormalSize="12dp"
+        app:dotSelectedSize="24dp"
+        app:normalStateColor="@color/colorPrimary"
+        app:wrongStateColor="@color/pwd_error"/>
+
+</LinearLayout>

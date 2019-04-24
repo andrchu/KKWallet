@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        app:title="消息详情"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/mda_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="轻控消息"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s9"/>
+
+        <TextView
+            android:id="@+id/mda_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="2018-02-05 15:57"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/s15"/>
+
+        <TextView
+            android:id="@+id/mda_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="关于上新币SYB,赠送新币的消息"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"/>
+
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fcp_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:button_image="@drawable/add_contact"
+        app:enable_button="true"
+        app:enable_line="false"
+        app:title="@string/card_pkg"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/fcp_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/transparent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@drawable/shape_select_card_top_bg">
+
+        <ImageView
+            android:id="@+id/dsc_exit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="center"
+            android:src="@drawable/xx"/>
+
+        <TextView
+            android:id="@+id/dsc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/select_address_type"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/dsc_confirm"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/confirm"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/s14"/>
+
+    </RelativeLayout>
+
+    <com.contrarywind.view.WheelView
+        android:id="@+id/dsc_wheel_view"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@color/page_bg"/>
+
+</LinearLayout>

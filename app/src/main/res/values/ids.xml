@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="back" type="id">back</item>
+    <item name="container" type="id">container</item>
+    <item name="error_retry" type="id">error_retry</item>
+</resources>

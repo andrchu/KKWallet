@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="8dp"
+    tools:showIn="@layout/activity_transaction_details">
+
+    <View
+        android:background="@drawable/shape_semi_circle_right"
+        android:layout_width="4dp"
+        android:layout_height="8dp"/>
+
+    <View
+        android:layerType="software"
+        android:background="@drawable/shape_imaginary_line"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:background="@drawable/shape_semi_circle_left"
+        android:layout_width="4dp"
+        android:layout_height="8dp"/>
+</LinearLayout>
+
+            

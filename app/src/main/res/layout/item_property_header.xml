@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/page_bg"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/property_header_bg"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/iph_show_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/hide_show_property"
+            android:gravity="bottom"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:paddingTop="12dp"
+            android:text="总资产(¥)"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"/>
+
+        <TextView
+            android:id="@+id/iph_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="6dp"
+            android:text="≈2312.33"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/s11"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>

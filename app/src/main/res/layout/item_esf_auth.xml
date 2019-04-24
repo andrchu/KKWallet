@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:gravity="center"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_weight="2"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/iea_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:text="EOS7f...7w5fb"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/iea_native_flag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="(本地)"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/s15"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/iea_bt_auth"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/selector_confirm"
+        android:gravity="center"
+        android:text="授权"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s14"/>
+
+    <TextView
+        android:id="@+id/iea_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="15dp"
+        android:text="权重：1"/>
+
+</LinearLayout>

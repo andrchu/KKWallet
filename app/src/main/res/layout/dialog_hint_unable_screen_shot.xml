@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/transparent"
+              android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/shape_dialog_def_bg"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+            android:drawableTop="@drawable/unable_screenshot"
+            android:text="@string/unable_screenshot"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/dialog_hint_unable_screen_shot"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/husd_exit"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/selector_button_orange"
+            android:gravity="center"
+            android:text="@string/know"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

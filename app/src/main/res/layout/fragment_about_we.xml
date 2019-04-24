@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        app:title="@string/about_we"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"/>
+
+    <TextView
+        android:id="@+id/awa_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="32dp"
+        android:drawablePadding="12dp"
+        android:drawableTop="@drawable/about_we_logo"
+        android:gravity="center"
+        android:lineSpacingExtra="4dp"
+        android:text="金刚钱包\n1.0.0"
+        android:textSize="@dimen/s13"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/fm_about_we"
+            style="@style/item_style"
+            android:drawablePadding="0dp"
+            android:text="@string/server_clause"
+            android:textSize="@dimen/s13"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:id="@+id/fm_check_update"
+            style="@style/item_style"
+            android:drawablePadding="0dp"
+            android:text="检查更新"
+            android:textSize="@dimen/s13"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@color/line"/>
+    </LinearLayout>
+
+</LinearLayout>

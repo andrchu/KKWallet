@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fmc_title_view"
+        android:background="@color/colorPrimary"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:back_ground_color="@color/colorPrimary"
+        app:button_margin_right="10dp"
+        app:button_text="@string/deal_record"
+        app:button_text_color="@color/white"
+        app:enable_button="true"
+        app:back_icon_image="@drawable/scanner_qr_white"
+        app:enable_line="false"
+        app:title="@string/my_center"
+        app:title_text_color="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#696f77"
+        android:orientation="horizontal">
+
+        <com.vip.wallet.widget.DrawableTextView
+            android:id="@+id/fmc_receive_send_token"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_option_gray"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/collect_pay_token"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"
+            app:topDrawable="@drawable/collect_pay"
+            app:topDrawableHeight="35dp"
+            app:topDrawableWidth="35dp"/>
+
+        <com.vip.wallet.widget.DrawableTextView
+            android:id="@+id/fmc_property"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_option_gray"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/home_rb_property"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"
+            app:topDrawable="@drawable/property"
+            app:topDrawableHeight="35dp"
+            app:topDrawableWidth="35dp"/>
+
+        <com.vip.wallet.widget.DrawableTextView
+            android:id="@+id/fmc_card_pkg"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/select_item_option_gray"
+            android:clickable="true"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:text="@string/card_pkg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"
+            app:topDrawable="@drawable/wallet"
+            app:topDrawableHeight="35dp"
+            app:topDrawableWidth="35dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/page_bg">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@drawable/shape_horizontal_line"
+                android:orientation="vertical"
+                android:paddingBottom="10dp"
+                android:showDividers="middle">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="安全"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/s14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:divider="@drawable/shape_vertical_line"
+                    android:orientation="horizontal"
+                    android:showDividers="middle">
+
+
+                    <!--
+                                        <com.vip.wallet.widget.DrawableTextView
+                                            android:id="@+id/fmc_back_up_private_key"
+                                            style="@style/center_option_style"
+                                            android:text="@string/back_up_private_key"
+                                            app:topDrawable="@drawable/back_up_private_key"/>-->
+
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_eos_resource"
+                        style="@style/center_option_style"
+                        android:text="EOS资源"
+                        app:topDrawable="@drawable/eos_resource"/>
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        style="@style/center_option_style"
+                        android:id="@+id/fmc_update_pwd"
+                        android:text="@string/modify_pwd"
+                        app:topDrawable="@drawable/update_pwd"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/white"/>
+
+                </LinearLayout>
+
+                <!--  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="100dp"
+                      android:divider="@drawable/shape_vertical_line"
+                      android:orientation="horizontal"
+                      android:showDividers="middle">
+
+                      <com.vip.wallet.widget.DrawableTextView
+                          android:id="@+id/fmc_log_out"
+                          style="@style/center_option_style"
+                          android:text="@string/logo_out"
+                          app:topDrawable="@drawable/logout"/>
+
+
+                      <View
+                          android:background="@color/white"
+                          android:layout_width="0dp"
+                          android:layout_height="match_parent"
+                          android:layout_weight="2"/>
+
+                  </LinearLayout>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20dp"
+                    android:text="其他"
+                    android:textColor="#666666"
+                    android:textSize="@dimen/s14"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:divider="@drawable/shape_vertical_line"
+                    android:orientation="horizontal"
+                    android:showDividers="middle">
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_message_center"
+                        style="@style/center_option_style"
+                        android:text="@string/message_center"
+                        app:topDrawable="@drawable/message_center"/>
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_contact"
+                        style="@style/center_option_style"
+                        android:text="@string/contacts"
+                        app:topDrawable="@drawable/contact"/>
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_def_currency"
+                        style="@style/center_option_style"
+                        android:text="@string/def_currency"
+                        app:topDrawable="@drawable/def_currency"/>
+
+
+                </LinearLayout>
+                <!-- <com.vip.wallet.widget.DrawableTextView
+                     style="@style/center_option_style"
+                     android:text="@string/update_nick_name"
+                     app:topDrawable="@drawable/update_nick_name"/>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:divider="@drawable/shape_vertical_line"
+                    android:orientation="horizontal"
+                    android:showDividers="middle">
+
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_we_chat_service"
+                        style="@style/center_option_style"
+                        android:text="@string/we_char_id"
+                        app:topDrawable="@drawable/weichat"/>
+
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_share_app"
+                        style="@style/center_option_style"
+                        android:text="@string/share_app"
+                        app:topDrawable="@drawable/share_app"/>
+
+                    <com.vip.wallet.widget.DrawableTextView
+                        android:id="@+id/fmc_about_we"
+                        style="@style/center_option_style"
+                        android:text="@string/about_we"
+                        app:topDrawable="@drawable/about_we"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@drawable/shadow_line"/>
+    </RelativeLayout>
+
+</LinearLayout>

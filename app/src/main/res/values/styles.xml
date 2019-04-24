@@ -1,0 +1,153 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowAnimationStyle">@style/ActivityAnimTheme</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="splashTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowBackground">@drawable/shape_splash_bg</item>
+    </style>
+
+    <style name="base_dialog" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowIsFloating">false</item>
+        <!-- 背景颜色 -->
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 背后的阴影 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 去掉标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 点击外部是否允许取消 -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+    <style name="pop_dialog" parent="base_dialog">
+        <item name="android:windowAnimationStyle">@style/LocationAnimationStyle</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="editText_dialog" parent="base_dialog">
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowSoftInputMode">stateVisible|adjustPan</item>
+    </style>
+
+    <style name="LocationAnimationStyle">
+        <item name="android:windowEnterAnimation">@anim/input_method_enter</item>
+        <item name="android:windowExitAnimation">@anim/input_method_exit</item>
+    </style>
+
+    <style name="ActivityAnimTheme">
+        <item name="android:activityOpenEnterAnimation">@anim/in_from_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/out_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/back_in_from_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/back_out_to_right</item>
+    </style>
+
+    <style name="home_rb">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:button">@null</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/s16</item>
+        <item name="android:textColor">@color/selector_home_nav_text</item>
+        <item name="android:paddingTop">6dp</item>
+    </style>
+
+    <style name="create_wallet_et">
+        <item name="android:background">@color/white</item>
+        <item name="android:textSize">@dimen/s13</item>
+        <item name="android:paddingLeft">14dp</item>
+        <item name="android:paddingRight">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/create_wallet_et_height</item>
+        <item name="android:textColorHint">@color/gray_text</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="button_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_margin">14dp</item>
+        <item name="android:background">@drawable/selector_confirm</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/s13</item>
+    </style>
+
+    <style name="button2_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">46dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:layout_marginBottom">14dp</item>
+        <item name="android:background">@drawable/selector_confirm</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@color/selector_button_text</item>
+        <item name="android:textSize">@dimen/s13</item>
+    </style>
+
+    <style name="item_style">
+        <!--<item name="android:drawableRight">@color/black</item>-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/s14</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:background">@drawable/item_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableRight">@drawable/you</item>
+    </style>
+
+    <style name="item_style_cir">
+        <!--<item name="android:drawableRight">@color/black</item>-->
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textSize">@dimen/s14</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginLeft">14dp</item>
+        <item name="android:layout_marginRight">14dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@drawable/item_cir_selector</item>
+        <item name="android:drawablePadding">10dp</item>
+        <item name="android:drawableRight">@drawable/you</item>
+    </style>
+
+    <style name="edit_style">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:textSize">@dimen/s13</item>
+        <item name="android:textColorHint">@color/gray_text</item>
+        <!-- <item name="android:gravity">center_vertical</item>-->
+        <item name="android:background">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="center_option_style">
+        <item name="android:background">@drawable/select_item_option</item>
+        <item name="android:textColor">@color/selector_black_white</item>
+        <item name="android:drawablePadding">12dp</item>
+        <item name="android:textSize">@dimen/s14</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:clickable">true</item>
+    </style>
+</resources>

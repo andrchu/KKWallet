@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fac_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:enable_back="false"
+        app:enable_line="false"
+        app:title="应用中心"/>
+
+    <FrameLayout
+        android:id="@id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/fac_success_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.vip.wallet.widget.VpSwipeRefreshLayout
+                android:id="@+id/fac_pull_fresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <com.vip.wallet.widget.CustomScrollView
+                    android:id="@+id/fac_scroll_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <cn.bingoogolapple.bgabanner.BGABanner
+                            android:id="@+id/fac_banner_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="160dp"
+                            app:banner_pageChangeDuration="1000"
+                            app:banner_pointAutoPlayAble="true"
+                            app:banner_pointAutoPlayInterval="3000"
+                            app:banner_pointContainerBackground="@color/transparent"
+                            app:banner_pointDrawable="@drawable/fac_banner_selector_point_hollow"
+                            app:banner_pointTopBottomMargin="15dp"
+                            app:banner_transitionEffect="alpha"/>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/fac_list_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:overScrollMode="never"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:descendantFocusability="blocksDescendants">
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/fac_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:overScrollMode="never"/>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </com.vip.wallet.widget.CustomScrollView>
+
+            </com.vip.wallet.widget.VpSwipeRefreshLayout>
+
+            <RelativeLayout
+                android:id="@+id/fac_list_group_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/fac_group_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/line"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/fac_list_group_hover"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@id/fac_group_line"
+                    android:background="@color/white"
+                    android:overScrollMode="never"/>
+
+                <View
+                    android:id="@+id/wa_title_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:layout_below="@id/fac_list_group_hover"
+                    android:background="@drawable/shadow_line"
+                    android:visibility="visible"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/home_view"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page_bg"
+    android:orientation="vertical"
+    tools:context="com.vip.wallet.ui.activity.HomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <FrameLayout
+            android:id="@+id/home_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/shadow_line_rotate"/>
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/home_rg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_nav_bar_height"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/home_rb_explore"
+            style="@style/home_rb"
+            android:checked="true"
+            android:drawableTop="@drawable/select_home_explore"
+            android:text="首页"/>
+
+        <RadioButton
+            android:id="@+id/home_rb_app"
+            style="@style/home_rb"
+            android:drawableTop="@drawable/select_home_property"
+            android:text="@string/app_center"/>
+
+        <RadioButton
+            android:id="@+id/home_rb_my"
+            style="@style/home_rb"
+            android:drawableTop="@drawable/select_home_my"
+            android:text="@string/my_center"/>
+    </RadioGroup>
+</LinearLayout>

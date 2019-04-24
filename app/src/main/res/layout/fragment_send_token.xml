@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/fst_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:button_image="@drawable/scan_qr"
+        app:enable_button="true"
+        app:title="@string/send_token"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@drawable/shape_horizontal_line"
+            android:orientation="vertical"
+            android:showDividers="middle">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fst_address"
+                    style="@style/edit_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:digits="1234567890qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM."
+                    android:hint="@string/receipt_address"
+                    android:maxLength="42"
+                    android:singleLine="true"/>
+
+                <ImageView
+                    android:id="@+id/fst_select_contact"
+                    android:layout_width="50dp"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_selector"
+                    android:scaleType="center"
+                    android:src="@drawable/contact"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/fst_et_out_count"
+                    style="@style/edit_style"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:hint="@string/out_count"
+                    android:inputType="numberDecimal"
+                    android:maxLength="20"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/fst_bt_all_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/item_selector"
+                    android:gravity="center"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:text="@string/all_out"
+                    android:textColor="@color/title_bar_bg"
+                    android:textSize="@dimen/s13"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fst_select_card"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="@string/select_card"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s13"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/fst_card_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+                    android:drawableRight="@drawable/you"
+                    android:paddingRight="12dp"
+                    android:text="Card1"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/s13"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/fst_select_token"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/item_selector"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_weight="1"
+                    android:text="@string/select_token"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/s13"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/fst_token_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="20dp"
+                    android:drawableRight="@drawable/you"
+                    android:paddingRight="12dp"
+                    android:text="ETH"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/s13"
+                    android:textStyle="bold"/>
+
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/fst_et_memo"
+                style="@style/edit_style"
+                android:layout_width="match_parent"
+                android:hint="@string/memo"
+                android:inputType="text"
+                android:maxLength="100"
+                android:maxLines="1"/>
+
+            <TextView
+                android:id="@+id/fst_tv_max_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/max_count"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/s15"/>
+
+            <LinearLayout
+                android:id="@+id/fst_layout_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="@string/miner_cost"
+                    android:textColor="@color/gray_l"
+                    android:textSize="@dimen/s14"/>
+
+                <SeekBar
+                    android:id="@+id/fst_seekbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="12dp"
+                    android:layout_marginTop="20dp"
+                    android:max="92"
+                    android:thumb="@drawable/selector_thumb"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="14dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/slow"/>
+
+                    <TextView
+                        android:id="@+id/fst_miner_cost"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/s13"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fast"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/saa_common_option"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/fst_send"
+                    style="@style/button_style"
+                    android:text="@string/next"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

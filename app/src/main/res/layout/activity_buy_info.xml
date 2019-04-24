@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:back_ground_color="@color/colorPrimary"
+        app:back_icon_image="@drawable/back_white"
+        app:enable_line="false"
+        app:title="@string/buy_info"
+        app:title_text_color="@color/white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_address"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/bia_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="0xd175bcac140cf26646c94e5f63003a379e69e28b"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@color/line"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/send_amount"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/bia_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="0.005ETH（¥30.00）"
+            android:textColor="@color/black"
+            android:textSize="@dimen/s14"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:text="@string/miner_cost"
+            android:textColor="@color/gray_l"
+            android:textSize="@dimen/s14"/>
+
+        <SeekBar
+            android:id="@+id/bia_seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="20dp"
+            android:max="99"
+            android:thumb="@drawable/selector_thumb"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="14dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/slow"/>
+
+            <TextView
+                android:id="@+id/bia_miner_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/s13"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fast"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bia_miner_cost_cny"
+            android:layout_marginTop="6dp"
+            android:textSize="@dimen/s13"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text=""/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/bia_commit"
+        style="@style/button_style"
+        android:text="@string/commit"/>
+
+
+</LinearLayout>

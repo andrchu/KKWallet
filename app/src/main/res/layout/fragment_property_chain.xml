@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.VpSwipeRefreshLayout
+        android:id="@+id/fpc_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.view.jameson.library.BannerRecyclerView
+                android:id="@+id/fpc_top_card_list"
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginBottom="14dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="14dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/fpc_token_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"/>
+        </LinearLayout>
+    </com.vip.wallet.widget.VpSwipeRefreshLayout>
+</LinearLayout>
+    <!--
+    <LinearLayout
+    android:id="@+id/fpc_card_layout"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="12dp"
+    android:background="@drawable/property_card_eth"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:textStyle="bold"
+        android:id="@+id/fpc_card_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="wallet1"
+        android:textColor="@color/white"
+        android:textSize="@dimen/s13"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/fpc_show_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="10dp"
+            android:drawableRight="@drawable/hide_show_property"
+            android:gravity="bottom"
+            android:paddingTop="12dp"
+            android:text="总资产(¥)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s13"/>
+
+        <TextView
+            android:id="@+id/fpc_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="≈0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s11"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/fpc_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="地址:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/s14"/>
+
+    </LinearLayout>
+
+    </LinearLayout>-->

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:id="@+id/iwa_title"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:button_image="@drawable/scan_qr"
+        app:enable_button="true"
+        app:title="@string/import_wallet"/>
+
+    <EditText
+        android:id="@+id/iwf_edit_seed_key"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:background="@color/white"
+        android:gravity="left"
+        android:hint="@string/input_seed_word_hint"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray_text"
+        android:textSize="@dimen/s13"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/iwf_wallet_name"
+            style="@style/edit_style"
+            android:hint="输入用户名 2-6个字符"
+            android:maxLength="6"/>
+
+        <View
+            android:id="@+id/iwa_path_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="12dp"
+            android:background="@color/line"/>
+
+        <LinearLayout
+            android:id="@+id/iwa_path_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/iwf_path"
+                style="@style/edit_style"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:hint="m/44'/60'/0'/0/0"
+                android:textColor="@color/gray_text"/>
+
+            <ImageView
+                android:background="@drawable/selector_back"
+                android:id="@+id/iwf_path_more_button"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingLeft="14dp"
+                android:paddingRight="14dp"
+                android:src="@drawable/down_more"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/iwf_cb_consent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableLeft="@drawable/selector_cb"
+            android:drawablePadding="6dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/read_consent"
+            android:textColor="@color/gray_text"
+            android:textSize="@dimen/s14"/>
+
+        <TextView
+            android:id="@+id/iwf_clause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="@string/create_wallet_clause"
+            android:textColor="@color/title_bar_bg"
+            android:textSize="@dimen/s14"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/iwf_next"
+        style="@style/button_style"
+        android:text="@string/next"/>
+</LinearLayout>

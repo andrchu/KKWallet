@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/page_bg"
+              android:orientation="vertical">
+
+    <com.vip.wallet.widget.TitleBarView
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        app:title="交易详情"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.vip.wallet.widget.CustomWebView
+            android:id="@+id/atd_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <ProgressBar
+            android:id="@+id/atd_pb"
+            android:layout_centerInParent="true"
+            android:layout_width="30dp"
+            android:layout_height="30dp"/>
+
+    </RelativeLayout>
+
+
+    <!-- <ScrollView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent">
+
+         <RelativeLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginLeft="12dp"
+             android:layout_marginRight="12dp"
+             android:layout_marginTop="12dp">
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="6dp"
+                 android:background="@drawable/shape_td_line_bg"/>
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:layout_marginBottom="12dp"
+                 android:layout_marginLeft="6dp"
+                 android:layout_marginRight="6dp"
+                 android:layout_marginTop="3dp"
+                 android:background="@color/white"
+                 android:orientation="vertical">
+
+                 <TextView
+                     android:drawablePadding="8dp"
+                     android:drawableLeft="@drawable/daiqueren"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center_horizontal"
+                     android:padding="12dp"
+                     android:text="待确定"
+                     android:textColor="@color/yellow"
+                     android:textSize="@dimen/s11"/>
+
+                 <include layout="@layout/layout_transaction_details_line"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="10dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="交易时间：2018-02-01 15:49:48"
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="12dp"
+                     android:text="交易数量："
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="+0.0165 ETH"
+                     android:textColor="@color/title_bar_bg"
+                     android:textSize="@dimen/s14"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="12dp"
+                     android:text="矿工费："
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="0.001071 Ether"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s14"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="0.001071 Ether"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s14"/>
+
+                 <include layout="@layout/layout_transaction_details_line"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="发款方："
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:text="0x5c025ef4421189f1244d8d62edecd60904ec7903"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="收款方："
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:text="0xad47d23a7c66c28ca31c762f2d43d3e3a32dbafa"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="交易号："
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginRight="12dp"
+                     android:text="0xbfa866033e8c8200056360a917cf72b44fd60007fa6a3dd069648f268dbf08d8"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s15"/>
+
+                 <include layout="@layout/layout_transaction_details_line"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:layout_marginTop="6dp"
+                     android:text="备注"
+                     android:textColor="@color/gray_text"
+                     android:textSize="@dimen/s15"/>
+
+                 <TextView
+                     android:layout_width="wrap_content"
+                     android:layout_height="40dp"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:text="给xxx"
+                     android:textColor="@color/black"
+                     android:textSize="@dimen/s15"/>
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginBottom="6dp"
+                     android:layout_marginLeft="12dp"
+                     android:gravity="bottom"
+                     android:layout_marginRight="12dp"
+                     android:orientation="horizontal">
+
+                     <com.vip.wallet.widget.UnderlineTextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:text="blcokchain查看"
+                         android:textColor="@color/black"/>
+
+                     <View
+                         android:layout_width="0dp"
+                         android:layout_height="wrap_content"
+                         android:layout_weight="1"/>
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:background="@drawable/selector_copy_url"
+                         android:padding="6dp"
+                         android:text="复制URL"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/s15"/>
+                 </LinearLayout>
+             </LinearLayout>
+         </RelativeLayout>
+
+     </ScrollView>-->
+
+</LinearLayout>

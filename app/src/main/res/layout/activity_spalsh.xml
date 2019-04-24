@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/sa_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    tools:context="com.vip.wallet.ui.activity.SplashActivity">
+
+
+    <ImageView
+        android:id="@+id/as_bg_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/shape_splash_bg"/>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/as_skip"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_splash_skip"
+        android:gravity="center"
+        android:text="跳过 4"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/s15"/>
+
+</RelativeLayout>
